@@ -63,7 +63,7 @@ class canvas  (p:MainActivity, d: SensorManager, v: SensorManager): View(p), Sen
 
     override fun onSensorChanged(event: SensorEvent?) {
         if(Sensor.TYPE_ACCELEROMETER == event!!.sensor.type){
-            if(abs(event.values[0]-anterior) >7){
+            if(abs(event.values[0]-anterior) >2){
                 seUsoAcel = true
             }
            anterior = event.values[0]
